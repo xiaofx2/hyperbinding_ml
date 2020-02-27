@@ -19,6 +19,16 @@ def create_input_matrix(data):
 # In[2]:
 
 
+def normalize_input_matrix(data):
+    data1 = create_input_matrix(data)
+    for i in range(len(data1)):
+        data1[i][0] = (data1[i][0])/20*255
+        data1[i][1] = (data1[i][1]+4.5)/9*255
+        data1[i][2] = (data1[i][2])/227.8*255
+        data1[i][3] = (data1[i][3])/4*255
+        data1[i][4] = (data1[i][4]-8)/4*255
+    return data1
+
 def sequence_to_matrix(sequence):
     import pandas as pd
     import numpy as np
@@ -32,16 +42,6 @@ def sequence_to_matrix(sequence):
     return matrix
 
 
-# In[ ]:
-
-
-np.array(dataframe['sequence'][1])
-
-
-# In[ ]:
-
-
-sequence_to_matrix(dataframe['sequence'][1])
 
 
 # In[4]:
@@ -170,8 +170,8 @@ def polarity(letter):
 def length(sequence):
     length_sum = 12
     for i in range(len(sequence)):
-        if sequence[i] == 'X' or 'x':
-            length_sum -= 1
+        if sequence[i] == 'X' or sequence[i] == 'x':
+            length_sum = length_sum - 1
     return length_sum
 
 
