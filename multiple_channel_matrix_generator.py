@@ -1,7 +1,7 @@
 import numpy as np
 
 def multiple_channel_generator(sequence):
-    mutiple_channel = np.zeros((3,21,12))
+    mutiple_channel = np.zeros((3,12,21))
     mutiple_channel[0] = hydropathy_channel_generator(sequence)
     mutiple_channel[1] = vol_channel_generator(sequence)
     mutiple_channel[2] = polar_channel_generator(sequence)
@@ -64,7 +64,6 @@ def hydropathy_channel_generator(sequence):
     basic_matrix = basic_matrix_generator(sequence)
     hydro_vector = list(hydro.values())
     hydro_matrix = basic_matrix.transpose() * hydro_vector
-    hydro_matrix = hydro_matrix.transpose()
     return hydro_matrix
 
 def vol_channel_generator(sequence):
@@ -93,7 +92,6 @@ def vol_channel_generator(sequence):
     basic_matrix = basic_matrix_generator(sequence)
     vol_vector = list(vol.values())
     vol_matrix = basic_matrix.transpose() * vol_vector
-    vol_matrix = vol_matrix.transpose()
     return vol_matrix
 
 def polar_channel_generator(sequence):
@@ -122,5 +120,4 @@ def polar_channel_generator(sequence):
     basic_matrix = basic_matrix_generator(sequence)
     polar_vector = list(polar.values())
     polar_matrix = basic_matrix.transpose() * polar_vector
-    polar_matrix = polar_matrix.transpose()
     return polar_matrix
