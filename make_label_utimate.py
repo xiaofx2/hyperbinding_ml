@@ -6,7 +6,7 @@ def label_marker(file_name):
     import pandas as pd
     import numpy as np
     import random
-    df = pd.read_csv('Filled-HLA-A*0201.csv', index_col=0)
+    df = pd.read_csv(file_name)
     full_list = []
     binding_list = []
     for i in range(len(df)):
@@ -20,10 +20,11 @@ def label_marker(file_name):
     non_label_list = [x for x in full_list if x not in label_list]
     df_drop = df.drop(index=non_label_list)
     label_only = []
+    df_drop = df_drop.reset_index()
     for i in range(len(df_drop)):
-            if df.loc[i,'meas'] < 500:
-                label_only.append('P')
-            else:
-                label_only.append('N')
+        if df_drop.loc[i,'meas'] < 500:
+            label_only.append('P')
+        else:
+            label_only.append('N')
     df_drop['label'] = label_only
-    df_drop.to_csv('Labeled-Filled-HLA-A*0201.csv')
+    df_drop.to_csv('Labeled-HLA-A-0201.csv')
