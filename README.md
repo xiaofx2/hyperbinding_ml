@@ -51,7 +51,9 @@ WAIT to be completed!!!
 Following CDC updates for COVID-19:
 https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html
 
-![Surface Spike Glycoprotein of COVID-19](https://www.saccounty.net/COVID-19/PublishingImages/COVID-19.jpg){ width=50% }
+![Surface Spike Glycoprotein of COVID-19](https://www.saccounty.net/COVID-19/PublishingImages/COVID-19.jpg|width=100, height=100)
+
+![Surface Spike Glycoprotein of COVID-19](https://www.saccounty.net/COVID-19/PublishingImages/COVID-19.jpg){:height="50%" width="50%"}
 
 Updated on Mar.15 2020, CDC is responding to an outbreak of respiratory disease caused by a novel coronavirus which has now been detected in more than 100 locations internationally, including in the United States. The virus has been named “SARS-CoV-2” and the disease it causes has been named “coronavirus disease 2019” (abbreviated “COVID-19”). 
 
