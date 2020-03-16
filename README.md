@@ -1,6 +1,7 @@
 # What is Hyperbinding?
 
    Hyperbinding is a MHC ligand prediction python package using machine learning approach to generate high-confidence peptides by considering the presentation possibilities of peptides with MHC molecules. MHC-peptide binding prediction plays an important role in cancer immunoengineering, T cell therapy and vaccine design. A simplified immune recognition process invloves the binding of a short peptide with antigen presenting cells, where the peptide comes from cancer neoantigen or virus antigen. Higher binding affinity between MHC and the peptide will allow the MHC-peptide complex to be recognized by T cells and thus elicit immune cascade in eliminating the pathogen.
+   
    The current release was trained using only data from HLA-A02:01, which is one of the most abundant alleles in Class I human MHC molecule. Currently, the training and testing support peptides ranging from 8 to 12 amino acids in length, but the model can be re-trained to support more alleles and wider ranges of peptide length.  The further application of Hyperbinding can be extended into different Class I MHC alleles, and broad categories of disease-related peptides.
 
    
@@ -49,7 +50,8 @@ WAIT to be completed!!!
 
 Following CDC updates for COVID-19:
 https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html
-![Surface Spike Glycoprotein of COVID-19](https://www.furman.edu/covid-19/wpcontent/uploads/sites/177/2020/03/CoronaVirusHeader-Final-3.jpg)
+
+![Surface Spike Glycoprotein of COVID-19](https://www.saccounty.net/COVID-19/PublishingImages/COVID-19.jpg)
 
 Updated on Mar.15 2020, CDC is responding to an outbreak of respiratory disease caused by a novel coronavirus which has now been detected in more than 100 locations internationally, including in the United States. The virus has been named “SARS-CoV-2” and the disease it causes has been named “coronavirus disease 2019” (abbreviated “COVID-19”). 
 
