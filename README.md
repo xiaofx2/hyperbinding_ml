@@ -48,7 +48,7 @@ We provide three fitting model for peptide-MHC binding prediction:
     
 ### 1. multi_class_CNN_model.h5
 This prediction model will generate binding prediction with five classifications:
-Architecture of convolutional nerual network(CNN):
+Architecture of convolutional neural network(CNN):
 
     Input shape is: 12x21x3
     Output: 5 classes of binders with different binding affinity
@@ -61,7 +61,7 @@ Architecture of convolutional nerual network(CNN):
 
 ### 2. mutiple_layers_CNN_model.h5
 This multi-layered prediction model will generate binding prediction with positive or negative.
-Architecture of convolutional nerual network(CNN):
+Architecture of convolutional neural network(CNN):
 
     Input shape is: 12x21x3
     Output: binary classes
@@ -80,8 +80,8 @@ This one-channel prediction model will generate binding prediction with positive
     class 2: Non-Binder (kd<500nM)
 
 ### For users want to optimize the training parameters, please open these .ipynb file for training models. 
-1. main_multiple_classification.ipynb58.3 kB7 minutes ago
-2. main_mutiple_layers_CNN.ipynb60.7 kB10 minutes ago
+1. main_multiple_classification.ipynb
+2. main_mutiple_layers_CNN.ipynb
 3. main_one_channel_CNN.ipynb
 
 
