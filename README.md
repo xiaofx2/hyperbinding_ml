@@ -15,11 +15,14 @@ We recommond using Git to install the Hyperbinding.
 ## Git (All the dependencies should be properly installed)
 
 ### System
+
 Linux
 
-### Dependencies
-perl    
+
+### Dependencies   
+
 python    
+
 
 ### Steps
 
@@ -51,7 +54,7 @@ WAIT to be completed!!!
 Following CDC updates for COVID-19:
 https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html
 
-![Surface Spike Glycoprotein of COVID-1 ](https://www.thermofisher.com/blog/microscopy/wpcontent/uploads/sites/12/2020/03/CDC_COVID-19-1.jpg)
+![Surface Spike Glycoprotein of COVID-1 ](doc/Design_Structure.jpeg)
 
 
 Updated on Mar.15 2020, CDC is responding to an outbreak of respiratory disease caused by a novel coronavirus which has now been detected in more than 100 locations internationally, including in the United States. The virus has been named “SARS-CoV-2” and the disease it causes has been named “coronavirus disease 2019” (abbreviated “COVID-19”). 
@@ -60,10 +63,10 @@ William is an Bioengineer working on T cell engineering and immunotherapy. His l
 
 The prediction of peptide-MHC binding affinity has rapidly accelerating the development of vaccines and adoptive T-cell therapies targeting virus. To design the high-throughput capture reagents, Rick need a list of peptides:
 1.  These peptides are 8 mers from the Surface Spike Glycoprotein (S protein) of SARS-CoV-2 virus
-2.  The patient is HLA-A-02:01 positive (indicating the type of MHC molecule) so these peptides should have higher binding affinity with HLA-A-02:01.
+2.  The patient is HLA-A02:01 positive (indicating the type of MHC molecule) so these peptides should have higher binding affinity with HLA-A02:01.
 
 
-Without overwhelming by complicated installation and coding, HyperBindng is an accessible tool to help Rick in generating the list of potent binders of HLA-A-02. William has the protein sequence of SARS-CoV-2 virus, which is made up of 1272 amino acids. Now he can following these instructions to slice the protein sequence into fragments with desirable length and predicate their binding ability to HLA-A-02.
+Without overwhelming by complicated installation and coding, HyperBindng is an accessible tool to help Rick in generating the list of potent binders of HLA-A02:01. William has the protein sequence of SARS-CoV-2 virus, which is made up of 1272 amino acids. Now he can following these instructions to slice the protein sequence into fragments with desirable length and predicate their binding ability to HLA-A02:01.
 
 
     cd HyperBinding/examples/prediction/
@@ -78,7 +81,7 @@ Spike Glycoprotein Sequence of SARS-CoV-2
     
     MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT
 
-Then William can follow the code to select 8 mers with 'Very strong' binding affinity to HLA-A-02. 
+Then William can follow the code to select 8 mers with 'Very strong' binding affinity to HLA-A02:01. 
 
  
 
