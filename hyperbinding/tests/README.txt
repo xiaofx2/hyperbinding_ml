@@ -1,1 +1,3 @@
-Unit tests for functional code
+Unit tests
+====================
+This part contains unit tests for functional code
