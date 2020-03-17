@@ -1,7 +1,19 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+"""
+================================
+Convert a 12 mer peptide sequence into 5x12 imput matrix considering these properties: 'sequence','hydropathy','volume','polarity','length'
+================================
+Hyperbinding contains tools for analyzing the peptide sequence and predicting the binding afiinity with HLA-A02:01. The chemical properties of peptides have been reported to strongly affect the binding affinity. Since we consider that the order of the sequence, hydropathy index, volume, polarity and the length of the peptide could affect the binding affinity and the properties of these amino acids are key factors for their binding to MHC, we extracted these information from each peptide. 
+"""
+
+
+
+###############################################################################
+# Create input matrix for CNN
+# Add peptide sequence into the matrix
+# -------------------
 
 
 def create_input_matrix(data):
@@ -16,8 +28,9 @@ def create_input_matrix(data):
     return input_matrix
 
 
-# In[2]:
-
+###############################################################################
+# Normalize the input matrx
+# -------------------
 
 def normalize_input_matrix(data):
     for i in range(data.shape[1]):
@@ -27,6 +40,11 @@ def normalize_input_matrix(data):
         data[3][i] = (data[3][i])/4*255
         data[4][i] = (data[4][i]-8)/4*255
     return data
+
+
+###############################################################################
+# Expand each sequence into a 5x12 matrix, where five characters are peptide sequence, hydropathy, volume, polarity, length.
+# -------------------
 
 def sequence_to_matrix(sequence):
     import pandas as pd
@@ -41,9 +59,11 @@ def sequence_to_matrix(sequence):
     return matrix
 
 
-
-
-# In[4]:
+###############################################################################
+# Each amido acid will have a hydropathy index
+# Reference for hydropathy index of each amino acids:
+# http://www.imgt.org/IMGTeducation/Aide-memoire/_UK/aminoacids/abbreviation.html#refs
+# -------------------
 
 
 def hydropathy(letter):
@@ -72,8 +92,9 @@ def hydropathy(letter):
     return hydro.get(letter,"Invalid sequence")
 
 
-# In[5]:
-
+###############################################################################
+# Each amido acid will have a numeric index for CNN analyzing
+# -------------------
 
 def sequence_to_num(letter):
     num = {
@@ -102,8 +123,11 @@ def sequence_to_num(letter):
     return num.get(letter,"Invalid sequence")
 
 
-# In[6]:
-
+###############################################################################
+# Each amido acid will have a volume index
+# Reference for volume index of each amino acids:
+# http://www.imgt.org/IMGTeducation/Aide-memoire/_UK/aminoacids/abbreviation.html#refs
+# -------------------
 
 def volume(letter):
     vol = {
@@ -131,7 +155,12 @@ def volume(letter):
     return vol.get(letter,"Invalid sequence")
 
 
-# In[7]:
+###############################################################################
+# Each amido acid will have a polarity index
+# Reference for polarity index of each amino acids:
+# DOI: https://doi.org/10.3389/fgene.2019.01191
+# -------------------
+
 
 
 def polarity(letter):
@@ -160,8 +189,10 @@ def polarity(letter):
     return polar.get(letter,"Invalid sequence")
 
 
-# In[8]:
-
+###############################################################################
+# Each peptide will have a length index
+# ALthough we insert 'X' into every peptide to get uniform 12-mer sequences, the original peptide lenth is still important when considering binding affinity.
+# -------------------
 
 def length(sequence):
     length_sum = 12
@@ -170,9 +201,9 @@ def length(sequence):
             length_sum = length_sum - 1
     return length_sum
 
-
-# In[ ]:
-
+###############################################################################
+# This file will convert a 12-mer peptide (with 'X' inserted) into a 5x12 matrix. 
+# -------------------
 
 
 
