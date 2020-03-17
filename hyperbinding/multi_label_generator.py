@@ -1,3 +1,23 @@
+"""
+================================
+Generate multi-label for the peptides to set binding affinity into five categories.
+================================
+Hyperbinding contains tools for analyzing the peptide sequence and predicting 
+the binding afiinity with HLA-A02:01. 
+"""
+
+
+
+###############################################################################
+# label 0: binding affinity <= 30 nM
+# label 1: 30 nM < binding affinity <= 500 nM
+# label 2: 500 nM < binding affinity <= 10000 nM
+# label 3: 10000 nM < binding affinity <= 20000 nM
+# label 4: 20000 nM < binding affinity 
+# Add label information into the file to indicate the binding affinity
+# -------------------
+
+
 import pandas as pd
 
 
