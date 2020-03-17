@@ -5,7 +5,7 @@
    The current release was trained using only data from HLA-A02:01, which is one of the most abundant alleles in Class I human MHC molecule. Currently, the training and testing support peptides ranging from 8 to 12 amino acids in length, but the model can be re-trained to support more alleles and wider ranges of peptide length.  The further application of Hyperbinding can be extended into different Class I MHC alleles, and broad categories of disease-related peptides.
 
    
-![Design structure of the project ](doc/Design_Structure.jpeg)   
+![Design structure of the project ](doc/Design_Structure.jpg)   
 
 
 # Download and installation
@@ -55,13 +55,8 @@ WAIT to be completed!!!
 Following CDC updates for COVID-19:
 https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/summary.html
 
-<<<<<<< HEAD
    
 ![Spike Glycoprotein of COVID-19](https://www.saccounty.net/COVID-19/PublishingImages/COVID-19.jpg)   
-=======
-![Surface Spike Glycoprotein of COVID-1 ](doc/Design_Structure.jpg)
->>>>>>> c3554db7a061695ffa57c684888392089d7a2d93
-
 
 Updated on Mar.15 2020, CDC is responding to an outbreak of respiratory disease caused by a novel coronavirus which has now been detected in more than 100 locations internationally, including in the United States. The virus has been named “SARS-CoV-2” and the disease it causes has been named “coronavirus disease 2019” (abbreviated “COVID-19”). 
 
