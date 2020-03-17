@@ -111,7 +111,7 @@ William is an Bioengineer working on T cell engineering and immunotherapy. His l
 
 To design the high-throughput capture reagents, William needs a list of peptides that  are 8 mers from the Surface Spike Glycoprotein (S protein) of SARS-CoV-2 virus. The patient is HLA-A02:01 positive (indicating the type of MHC molecule) so these peptides should also have higher binding affinity with HLA-A02:01.
 
-Without being overwhelmed by complicated installation and coding, HyperBindng is an accessible tool to help Rick in generating the list of potent binders of HLA-A02:01. William has the protein sequence of SARS-CoV-2 virus, which is made up of 1272 amino acids. Now he can follow these instructions to slice the protein sequence into fragments with desirable length and predicate their binding ability to HLA-A02:01.
+Without being overwhelmed by complicated installation and coding, HyperBindng is an accessible tool to help him in generating the list of potent binders of HLA-A02:01. William has the protein sequence of SARS-CoV-2 virus, which is made up of 1272 amino acids. Now he can follow these instructions to slice the protein sequence into fragments with desirable length and predicate their binding ability to HLA-A02:01.
 
 
 
