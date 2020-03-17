@@ -86,9 +86,13 @@ This one-channel prediction model will generate binding prediction with positive
 
 
 ### For users want to use the training model, please choose one of the mentioned three model for prediction result. 
-    import hyperbinding
-    keras.models.load_model
     
+    import matplotlib.pyplot as plt
+    import numpy as np
+    from keras.models import load_model
+    import sys
+    sys.path.append("../..")
+    model = load_model('../model_fitting/multi_class_CNN_model.h5')
     
     
 # Application example    
