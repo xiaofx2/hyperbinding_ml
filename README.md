@@ -37,41 +37,55 @@ Download the latest version of Hyperbinding from https://github.com/UWDIRECT/Hyp
 
 ## Get peptide-MHC binding prediction using any of three HyperBinding fiting model
 
+Go to the directory of model_fitting.
+
+    cd HyperBinding/examples/model_fitting/
+
 We provide three fitting model for peptide-MHC binding prediction:
 1. multi_class_CNN_model.h5 
 2. mutiple_layers_CNN_model.h5
 3. one_channel_CNN_model.h5
     
-### multi_class_CNN_model.h5
+### 1. multi_class_CNN_model.h5
 This prediction model will generate binding prediction with five classifications:
 Architecture of convolutional nerual network(CNN):
-Input shape is: 12x21x3
-Output: 5 classes of binders with different binding affinity
-Five classes:
-class 1: Very strong binder (kd>=50nM)
-class 2: Strong binder (50nM<kd<=500nM)
-class 3: Medium binder (500nM<kd<=10000nM)
-class 4: Weak binder (10000nM<kd<=20000nM)
-class 5: Very weak binder (kd>20000nM)
 
-### mutiple_layers_CNN_model.h5
+    Input shape is: 12x21x3
+    Output: 5 classes of binders with different binding affinity
+    Five classes:
+    class 1: Very strong binder (kd>=50nM)
+    class 2: Strong binder (50nM<kd<=500nM)
+    class 3: Medium binder (500nM<kd<=10000nM)
+    class 4: Weak binder (10000nM<kd<=20000nM)
+    class 5: Very weak binder (kd>20000nM)
+
+### 2. mutiple_layers_CNN_model.h5
 This multi-layered prediction model will generate binding prediction with positive or negative.
 Architecture of convolutional nerual network(CNN):
-Input shape is: 12x21x3
-Output: binary classes
-2 classes:
-class 1: Binder (kd>=500nM)
-class 2: Non-Binder (kd<500nM)
 
-### one_channel_CNN_model.h5
+    Input shape is: 12x21x3
+    Output: binary classes
+    2 classes:
+    class 1: Binder (kd>=500nM)
+    class 2: Non-Binder (kd<500nM)
+
+### 3. one_channel_CNN_model.h5
 This one-channel prediction model will generate binding prediction with positive or negative.
-Architecture of convolutional nerual network(CNN):
-Input shape is: 5x12x1
-Output: binary classes
-2 classes:
-class 1: Binder (kd>=500nM)
-class 2: Non-Binder (kd<500nM)
 
+    Architecture of convolutional nerual network(CNN):
+    Input shape is: 5x12x1
+    Output: binary classes
+    2 classes:
+    class 1: Binder (kd>=500nM)
+    class 2: Non-Binder (kd<500nM)
+
+### For users want to optimize the training parameters, please open these .ipynb file for training models. 
+1. main_multiple_classification.ipynb58.3 kB7 minutes ago
+2. main_mutiple_layers_CNN.ipynb60.7 kB10 minutes ago
+3. main_one_channel_CNN.ipynb
+
+
+### For users want to use the training model, please choose one of the mentioned three model for prediction result. 
     import hyperbinding
     keras.models.load_model
     
