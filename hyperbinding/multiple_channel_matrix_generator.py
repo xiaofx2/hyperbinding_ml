@@ -1,3 +1,23 @@
+"""
+================================
+This file will transform sequence to multiple channel-matrix for CNN.
+This file will convert each peptide sequence into a 21*12*3 input matrix. 
+The aim of this step is to increase the complexity of the model 
+and try to increase the model accuracy.
+================================
+Hyperbinding contains tools for analyzing the peptide sequence and predicting 
+the binding afiinity with HLA-A02:01. 
+"""
+
+
+###############################################################################
+# Create multi-channel input matrix for CNN
+# Three channels:  hydropathy, volume, polarity
+# Each channel: 21*12 matrix. 
+# 12 rows stand for 12 locations; 21 columns stand for 21 amino acids.
+# -------------------
+
+
 import numpy as np
 
 def multiple_channel_generator(sequence):
@@ -6,6 +26,12 @@ def multiple_channel_generator(sequence):
     mutiple_channel[1] = vol_channel_generator(sequence)
     mutiple_channel[2] = polar_channel_generator(sequence)
     return mutiple_channel
+
+
+###############################################################################
+# Generate multi-channel matrix for peptide sequence
+# Each amido acid will have a numeric index for CNN analyzing
+# ------------------- 
 
 def basic_matrix_generator(sequence):
     num = {
@@ -38,6 +64,14 @@ def basic_matrix_generator(sequence):
         col += 1
     return matrix
 
+
+###############################################################################
+# Generate multi-channel matrix for hydropathy information
+# Each amido acid will have a hydropathy index
+# Reference for hydropathy index of each amino acids:
+# http://www.imgt.org/IMGTeducation/Aide-memoire/_UK/aminoacids/abbreviation.html#refs
+# -------------------
+
 def hydropathy_channel_generator(sequence):
     hydro = {
      'A': 1.8,
@@ -66,6 +100,14 @@ def hydropathy_channel_generator(sequence):
     hydro_matrix = basic_matrix.transpose() * hydro_vector
     return hydro_matrix
 
+
+###############################################################################
+# Generate multi-channel matrix for volume information
+# Each amido acid will have a volume index
+# Reference for volume index of each amino acids:
+# http://www.imgt.org/IMGTeducation/Aide-memoire/_UK/aminoacids/abbreviation.html#refs
+# -------------------
+
 def vol_channel_generator(sequence):
     vol = {
      'A': 88.6,
@@ -93,6 +135,14 @@ def vol_channel_generator(sequence):
     vol_vector = list(vol.values())
     vol_matrix = basic_matrix.transpose() * vol_vector
     return vol_matrix
+
+
+###############################################################################
+# Generate multi-channel matrix for polarity information
+# Each amido acid will have a polarity index
+# Reference for polarity index of each amino acids:
+# DOI: https://doi.org/10.3389/fgene.2019.01191
+# -------------------
 
 def polar_channel_generator(sequence):
     polar = {
