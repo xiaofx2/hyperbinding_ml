@@ -31,20 +31,49 @@ Download the latest version of Hyperbinding from https://github.com/UWDIRECT/Hyp
     
     git clone https://github.com/UWDIRECT/HyperBinding.git
     
-Unzip the source code and go into the directory by using the following command:
-
-    
- 
-
-Invoke the setup script:
-
-    python setup.py install
 
 
 # General usage
 
- 
-WAIT to be completed!!!  
+## Get peptide-MHC binding prediction using any of three HyperBinding fiting model
+
+We provide three fitting model for peptide-MHC binding prediction:
+1. multi_class_CNN_model.h5 
+2. mutiple_layers_CNN_model.h5
+3. one_channel_CNN_model.h5
+    
+### multi_class_CNN_model.h5
+This prediction model will generate binding prediction with five classifications:
+Architecture of convolutional nerual network(CNN):
+Input shape is: 12x21x3
+Output: 5 classes of binders with different binding affinity
+Five classes:
+class 1: Very strong binder (kd>=50nM)
+class 2: Strong binder (50nM<kd<=500nM)
+class 3: Medium binder (500nM<kd<=10000nM)
+class 4: Weak binder (10000nM<kd<=20000nM)
+class 5: Very weak binder (kd>20000nM)
+
+### mutiple_layers_CNN_model.h5
+This multi-layered prediction model will generate binding prediction with positive or negative.
+Architecture of convolutional nerual network(CNN):
+Input shape is: 12x21x3
+Output: binary classes
+2 classes:
+class 1: Binder (kd>=500nM)
+class 2: Non-Binder (kd<500nM)
+
+### one_channel_CNN_model.h5
+This one-channel prediction model will generate binding prediction with positive or negative.
+Architecture of convolutional nerual network(CNN):
+Input shape is: 5x12x1
+Output: binary classes
+2 classes:
+class 1: Binder (kd>=500nM)
+class 2: Non-Binder (kd<500nM)
+
+    import hyperbinding
+    keras.models.load_model
     
     
     
