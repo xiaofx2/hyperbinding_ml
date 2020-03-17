@@ -3,9 +3,16 @@
 
 """
 ================================
-Convert a 12 mer peptide sequence into 5x12 imput matrix considering these properties: 'sequence','hydropathy','volume','polarity','length'
+Convert a 12 mer peptide sequence into 5x12 imput matrix considering these 
+properties: 'sequence','hydropathy','volume','polarity','length'
 ================================
-Hyperbinding contains tools for analyzing the peptide sequence and predicting the binding afiinity with HLA-A02:01. The chemical properties of peptides have been reported to strongly affect the binding affinity. Since we consider that the order of the sequence, hydropathy index, volume, polarity and the length of the peptide could affect the binding affinity and the properties of these amino acids are key factors for their binding to MHC, we extracted these information from each peptide. 
+Hyperbinding contains tools for analyzing the peptide sequence and predicting 
+the binding afiinity with HLA-A02:01. The chemical properties of peptides have 
+been reported to strongly affect the binding affinity. Since we consider that 
+the order of the sequence, hydropathy index, volume, polarity and the length 
+of the peptide could affect the binding affinity and the properties of these 
+amino acids are key factors for their binding to MHC, we extracted these 
+information from each peptide. 
 """
 
 
@@ -43,7 +50,8 @@ def normalize_input_matrix(data):
 
 
 ###############################################################################
-# Expand each sequence into a 5x12 matrix, where five characters are peptide sequence, hydropathy, volume, polarity, length.
+# Expand each sequence into a 5x12 matrix
+# Five characters are peptide sequence, hydropathy, volume, polarity, length.
 # -------------------
 
 def sequence_to_matrix(sequence):
@@ -191,7 +199,8 @@ def polarity(letter):
 
 ###############################################################################
 # Each peptide will have a length index
-# ALthough we insert 'X' into every peptide to get uniform 12-mer sequences, the original peptide lenth is still important when considering binding affinity.
+# We have inserted 'X' into every peptide to get uniform 12-mer sequences.
+# The original peptide lenth is still important when considering binding affinity.
 # -------------------
 
 def length(sequence):
