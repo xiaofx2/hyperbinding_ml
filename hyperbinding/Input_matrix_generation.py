@@ -3,7 +3,7 @@
 
 """
 ================================
-Convert a 12 mer peptide sequence into 5x12 imput matrix considering these 
+Convert a 12 mer peptide sequence into 5x12 input matrix considering these 
 properties: 'sequence','hydropathy','volume','polarity','length'
 ================================
 Hyperbinding contains tools for analyzing the peptide sequence and predicting 
@@ -68,7 +68,7 @@ def sequence_to_matrix(sequence):
 
 
 ###############################################################################
-# Each amido acid will have a hydropathy index
+# Each amino acid will have a hydropathy index
 # Reference for hydropathy index of each amino acids:
 # http://www.imgt.org/IMGTeducation/Aide-memoire/_UK/aminoacids/abbreviation.html#refs
 # -------------------
