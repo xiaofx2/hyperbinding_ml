@@ -1,4 +1,6 @@
 ![Logo of the project ](doc/Hyperbinding_logo.jpg)   
+[![travis build]
+[![License]
 --------------
 
    Hyperbinding is a MHC ligand prediction python package using machine learning approach to generate high-confidence peptides by considering the presentation possibilities of peptides with MHC molecules. MHC-peptide binding prediction plays an important role in cancer immunoengineering, T cell therapy and vaccine design. A simplified immune recognition process involves the binding of a short peptide with antigen presenting cells, where the peptide comes from cancer neoantigen or virus antigen. Higher binding affinity between MHC and the peptide will allow the MHC-peptide complex to be recognized by T cells and thus elicit an immune cascade in eliminating the pathogen.
