@@ -1,6 +1,6 @@
 ![Logo of the project ](doc/Hyperbinding_logo.jpg)   
 
-[![travis build](https://travis-ci.com/Chenyi-Mao/formulation.svg?branch=master)]
+![travis build](https://travis-ci.com/Chenyi-Mao/formulation.svg?branch=master)
 [![License](https://img.shields.io/github/license/Chenyi-Mao/formulation)]
 --------------
 
